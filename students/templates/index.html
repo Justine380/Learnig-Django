@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Myapp</title>
+    </head>
+
+    <body>
+        <h1>students</h1>
+        <table border="1">
+            {%for x in list%}
+            <tr>
+                <td>{{x.id}}</td>
+                <td>{{x.firstname}}</td>
+                <td>{{x.lastname}}</td>
+                <td><a href="delete/{{x.id}}">delete</a></td>
+                <td><a href="update/{{x.id}}">Update</a></td>
+            </tr>
+            {% endfor %}
+            
+
+        </table>
+        <p>
+            <a href="add/">Add student</a>
+        </p>
+        
+    </body>
+</html>
